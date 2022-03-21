@@ -65,3 +65,20 @@ img.logo { max-height: 7vw; }
 .container {
     margin-top: 1rem;
 }
+
+.todo {
+  padding: 10px; 
+  border-radius: 10px; 
+  margin-bottom: 5px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.grey-border {border-color: #cac9c9;}
+.red-border {border-color: #FE9F9F;}
+.orange-border {border-color:#FEC79F;}
+.yellow-border {border-color: #fadf94;}
+.green-border {border-color:#BEFE9F;}
+.blue-border {border-color: #9FEDFE;}
+.purple-border {border-color:#CFA3DF;}
+.pink-border {border-color: #FE9FE9;}

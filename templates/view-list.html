@@ -33,8 +33,10 @@
     <div class='container'>
         <h2>Todo List</h2>
         {% for todo in todo_list %}
-        <h4>{{todo.title}}</h4>
-        <p>{{todo.description}}</p>
+        <div class="todo {{todo.color}}-border">
+            <h4>{{todo.title}}</h4>
+            <p>{{todo.description}}</p>
+        </div>
         {% endfor %}
     </div>
 </body>

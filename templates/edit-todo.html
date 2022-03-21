@@ -32,26 +32,25 @@
     <!-- content -->
     <div class='container'>
         <form method="post">
-            <label for="fname">First name:</label>
+            <label for="title">Todo title:</label>
             <br />
-            <input type="text" id="fname" name="fname">
-            <br />
-            <br />
-            <label for="lname">Last name:</label>
-            <br />
-            <input type="text" id="lname" name="lname">
+            <input type="text" id="title" name="title">
             <br />
             <br />
-            <label for="animal">Favorite animal:</label>
-            <select id="animal" name="animal">
-                <option value="lion">lion</option>
-                <option value="snake">snake</option>
-                <option value="eagle">eagle</option>
-                <option value="badger">badger</option>
+            <label for="description">Todo description:</label>
+            <br />
+            <input type="text" id="description" name="description">
+            <br />
+            <br />
+            <label for="urgency">Urgency:</label>
+            <select id="urgency" name="urgency">
+                <option value="lion">Urgent</option>
+                <option value="snake">None</option>
+                <option value="eagle">Non Urgent</option>
             </select>
             <br />
             <br />
-            <input type="submit" value="Submit">
+            <input type="submit" value="Create">
         </form>
     </div>
 </body>

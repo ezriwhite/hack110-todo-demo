@@ -18,9 +18,9 @@ def view_todo_list():
     return render_template('view-list.html', todo_list=todo_list)
 
 
-@app.route('/todo<todo_number>')
-def display_todo(todo_number: str):
-    return render_template('todo.html', user=todo_list[int(todo_number)])
+@app.route('/edit-todo<todo_number>')
+def edit_todo(todo_number: str):
+    return render_template('edit-todo.html', user=todo_list[int(todo_number)])
 
 
 @app.route('/create-todo', methods=["GET", "POST"])
@@ -31,11 +31,12 @@ def create_todo():
 
         title: str = request.form['title']
         description: str = request.form['description']
+        color: str = request.form['color']
 
         if title == '':
             return render_template("create-todo.html")
 
-        new_todo: todo = todo(todo_count, title, description)
+        new_todo: todo = todo(todo_count, title, description, color)
         todo_list.append(new_todo)
 
         todo_count += 1
