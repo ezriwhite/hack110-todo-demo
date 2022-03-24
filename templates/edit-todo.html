@@ -34,23 +34,28 @@
         <form method="post">
             <label for="title">Todo title:</label>
             <br />
-            <input type="text" id="title" name="title">
+            <input type="text" id="title" name="title" value="{{todo.title}}">
             <br />
             <br />
             <label for="description">Todo description:</label>
             <br />
-            <input type="text" id="description" name="description">
+            <input type="text" id="description" name="description" value="{{todo.description}}">
             <br />
             <br />
-            <label for="urgency">Urgency:</label>
-            <select id="urgency" name="urgency">
-                <option value="lion">Urgent</option>
-                <option value="snake">None</option>
-                <option value="eagle">Non Urgent</option>
+            <label for="color">Color:</label>
+            <select id="color" name="color">
+                <option value="grey">Grey</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+                <option value="pink">Pink</option>
             </select>
             <br />
             <br />
-            <input type="submit" value="Create">
+            <input type="submit" value="Update">
         </form>
     </div>
 </body>
