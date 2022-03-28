@@ -16,9 +16,9 @@ def index():
 @app.route('/view-todo-list', methods=["GET", "POST"])
 def view_todo_list():
     if request.method == "POST" and len(todo_list) > 0:
-        # an item was checked/unchecked - len > 0 ensures refreshes don't potentially crash the site.
+        # an item was checked/unchecked -- len > 0 ensures refreshes don't potentially crash the site.
         id: int = int(request.form['check-button'])
-        todo_list[id].unchecked = not todo_list[id].unchecked
+        todo_list[id].checked = not todo_list[id].checked
     return render_template('view-list.html', todo_list=todo_list)
 
 
@@ -47,7 +47,6 @@ def create_todo():
     if request.method == "POST":
         global todo_list
         global todo_count
-
         title: str = request.form['title']
         description: str = request.form['description']
         color: str = request.form['color']

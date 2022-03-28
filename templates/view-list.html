@@ -28,21 +28,22 @@
     </div>
   </nav>
 
-  <!-- content -->
-  <div class="container">
-    <h2>Todo List</h2>
-    {% for i in range(todo_list| length) %} {% set todo = todo_list[i] %}
-    <div class="todo {{ '' if todo.unchecked else 'checked'}} {{todo.color}}-border">
-      <div>
+    <!-- content -->
+    <div class="container">
+      <h2>Todo List</h2>
+      {% for i in range(todo_list| length) %} {% set todo = todo_list[i] %}
+      <div
+        class="todo {{ 'checked' if todo.checked else ''}} {{todo.color}}-border"
+      >
         <form action="/view-todo-list" method="POST">
-          <button type="submit" style="float: right" value="{{i}}" name="check-button" id="check-button"
-            todo-id="{{i}}">
-            {{'Check' if todo.unchecked else 'Uncheck'}}
-          </button>
-        </form>
-        <form action="/edit-todo{{i}}" method="GET">
-          <button type="submit" style="float: right" value="{{i}}" name="edit-button" id="edit-button" todo-id="{{i}}">
-            Edit
+          <button
+            type="submit"
+            style="float: right"
+            value="{{i}}"
+            name="check-button"
+            id="check-button"
+          >
+            {{'Uncheck' if todo.checked else 'Check'}}
           </button>
         </form>
       </div>
